@@ -1,0 +1,538 @@
+@import url('bootstrap.css');
+@import url('animate.css');
+@import url(//fonts.googleapis.com/css?family=Kaushan+Script);
+@font-face {
+   	font-family: 'font_1';
+    src: url('font/Roboto-Regular.ttf');
+}
+@font-face {
+   	font-family: 'font_2';
+    src: url('font/seguisli.ttf');
+}
+.test{
+	border: 2px solid red;
+}
+.test-1{
+	border: 2px solid green;
+}
+body .header .logo{
+	background: #367fa9;
+	padding:10px;
+	text-align: center;
+	height: 51px;
+}
+body .header .logo a{
+	color: #fff;
+	font-family: 'Kaushan Script', cursive;
+	font-size: 22px;
+	text-decoration: none;
+}
+body .header .top-nav{
+	background:#3c8dbc;
+	height: 51px;
+}
+body .header .toggle-img{
+	width: 38%;
+	margin-top: 16px;
+	cursor: pointer;
+}
+body .header .user{
+	padding: 10px 20px;
+	padding-top: 15px;
+	color: #EBF0F2;
+	text-align: right;
+	font-size: 14px;
+	font-family: 'Source Sans Pro', sans-serif;
+	cursor: pointer;
+}
+body .header .user i:nth-child(1){
+	padding-right: 9px;
+}
+body .header .user i:nth-child(2){
+	padding-left: 9px;
+}
+body #left-nav{
+	width: 228px;
+	background: #f4f4f4;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 51px;
+	 -webkit-transition: all 1000ms;
+     -moz-transition: all 1000ms; 
+      -ms-transition: all 1000ms; 
+       -o-transition: all 1000ms; 
+          transition: all 1000ms;
+
+}
+body #left-nav .avatar-img{
+	text-align: right;
+	padding-right: 5px;
+}
+body #left-nav .avatar-img img{
+	width: 65%;
+	border-radius: 150px;
+}
+body #left-nav .user-detail{
+	margin-top: 10px;
+}
+body #left-nav .user-detail .user-name{
+	font-size: 13px;
+	padding-top: 10px;
+}
+body #left-nav #left-menu{
+	margin-top: 30px;
+}
+body #left-nav #left-menu ul{
+	padding: 0px;
+	margin:0px;
+}
+body #left-nav #left-menu ul li{
+	display: block;
+	border-top: 1px solid #dbdbdb;
+	cursor: pointer;
+}
+body #left-nav #left-menu ul li ul li{
+	display: block;
+	border:none;
+	cursor: pointer;
+}
+body #left-nav #left-menu ul li ul{
+	display: none;
+}
+body #left-nav #left-menu ul li:hover,body #left-nav #left-menu ul li.active{
+	background:#FDFDFD;
+}
+body #left-nav #left-menu ul li:last-child{
+	border-bottom: 1px solid #dbdbdb;
+}
+body #left-nav #left-menu ul li ul li:last-child{
+	border-bottom:none;
+}
+body #left-menu ul li a{
+	padding: 12px 5px 12px 15px;
+	display: block;
+	color: #000;
+	text-decoration: none;
+}
+body #left-menu ul li a .fa{
+width: 20px;
+}
+body #main-body{
+	margin-left: 228px;
+	width: calc(100% - 228px);
+	 -webkit-transition: all 1000ms;
+     -moz-transition: all 1000ms; 
+      -ms-transition: all 1000ms; 
+       -o-transition: all 1000ms; 
+          transition: all 1000ms;
+}
+
+body #left-nav.slide-left{
+	left: -228px;
+}
+body #main-body.slide-left{
+	margin-left: 0px;
+	width: 100%;
+}
+body #main-body .main-heading{
+	background: #fbfbfb;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+	margin: 0;
+	font-size: 24px;
+	font-family: 'Source Sans Pro', sans-serif;
+	position: relative;
+	padding: 15px 15px 10px 20px;
+	height: 59px;
+}
+body #main-body #main-content-body{
+	background-color:#f9f9f9;
+	padding: 20px 15px;
+	width: 100%;
+	overflow-y: auto;
+	overflow-x: auto;
+	margin-top: 1px;
+}
+/*body #main-body .main-content{
+	padding: 20px 15px;
+	width: 100%;
+	overflow-y: auto;
+	overflow-x: auto;
+}
+*/
+body #main-body .offline-create .msg,body #main-body .online-create .msg{
+	text-align: center;
+	font-family: 'font_1';
+	font-size: 17px;
+	margin-bottom: 15px;
+	height: 28px;
+}
+body #main-body .offline-create .success-msg, body #main-body .online-create .success-msg{
+	color: #168039;
+}
+body #main-body .offline-create .error-msg, body #main-body .online-create .error-msg{
+	color: #dd4b39;
+}
+.form-control{
+	border-radius: 0px;
+}
+.text-label{
+	font-size: 17px;
+	font-family: 'font_1';
+	padding-top: 5px;
+}
+body #main-body .upload{
+	font-family: 'font_1' !important;
+	color: #fff;
+	background: url('../img/upload.png') #367fa9 no-repeat;
+	background-size: 42px;
+	background-position: 10%;
+	padding: 8px 30px;
+	text-align: center;
+	font-size: 16px;
+	width: 100%;
+	cursor: pointer;
+}
+
+.file-error{
+	text-align: left;
+	font-size: 13px;
+	font-family: 'font_1';
+	color: #dd4b39;
+	padding-top: 7px;
+}
+.file-success-msg{
+	text-align: left;
+	font-size: 13px;
+	font-family: 'font_1';
+	color: #168039;
+	padding-top: 9px;
+}
+.submit-btn{
+	width: 100%;
+	background:#168039;
+	font-family: 'font_1';
+	color: #fff;
+	text-align: center;
+	padding: 7px;
+	font-size: 17px;
+	cursor: pointer;
+}
+.cancel-btn{
+	width: 100%;
+	background: #F04E41;
+	font-family: 'font_1';
+	color: #fff;
+	text-align: center;
+	padding: 7px;
+	font-size: 17px;
+	cursor: pointer;
+}
+.user-detail-div{
+	display: none;
+	background: #fbfbfb;
+	position: absolute;
+	height: 59px;
+	width: 217px;
+	right: 2px;
+	padding:20px;
+	z-index: 1;
+	animation-name: fadeAnimation;
+	animation-duration: .7s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+	-webkit-animation-name: fadeAnimation;
+	-webkit-animation-duration: .7s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-name: fadeAnimation;
+	-moz-animation-duration: .7s;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: ease;
+	-moz-animation-fill-mode: forwards;
+
+	-webkit-box-shadow: 0px -1px 6px 2px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px -1px 6px 2px rgba(0,0,0,0.25);
+	box-shadow: 0px -1px 6px 2px rgba(0,0,0,0.25);
+}
+@keyframes fadeAnimation {
+  from {
+    opacity: 0;
+    top: 140%;
+  }
+  to {
+    opacity: 1;
+    top: 110%;
+  }
+}
+@-webkit-keyframes fadeAnimation {
+  from {
+    opacity: 0;
+    top: 140%;
+  }
+  to {
+    opacity: 1;
+    top: 110%;
+  }
+}
+.top-arrow{
+	position: absolute;
+	right: 26px;
+	top: -30px;
+	font-size: 35px;
+	color: #fff;
+}
+.hello{
+	/*display: block !important;*/
+}
+.user-detail-div a{
+	padding: 8px 15px;
+	color: #666666;
+	background-color: #f4f4f4!important;
+	border:solid #ddd 1px;
+	text-decoration: none;
+	font-size: 13px;
+	font-family: 'font_1';
+}
+.user-detail-div a.logout-btn{
+	margin-left: 21px;
+}
+
+body .files-view table{
+	width: 100%;
+}
+body .files-view table thead th{
+	text-align: center;
+	font-family: 'font_1';
+}
+body .files-view table i{
+	font-size: 25px;
+	margin-top: 7px;
+}
+body .files-view table thead th:nth-child(1){
+	width: 6%;
+}
+body .files-view table thead th:nth-child(2){
+	width: 6%;
+}
+body .files-view table thead th:nth-child(4){
+	width: 4%;
+}
+body .files-view table thead th:nth-child(5){
+	width: 14%;
+}
+body .files-view table thead th:nth-child(6){
+	width: 13%;
+}
+body .files-view table thead th:nth-child(7){
+	width: 14%;
+}
+body .files-view table tbody img{
+	height: 30px;
+	margin-top: 5px;
+}
+body .files-view table tbody tr td{
+	font-family: 'font_1';
+	padding-top:10px; 
+}
+body .files-view table tbody tr td:nth-child(1){
+	text-align: center;
+	font-weight: bold;
+	padding-top: 20px;
+}
+body .files-view table tbody tr td:nth-child(5){
+	text-align: center;
+}
+body .files-view table tbody tr td:nth-child(5) span{
+	font-size: 10px;
+}
+body .files-view table tbody tr td:nth-child(6){
+	text-align: center;
+}
+body .files-view table tbody tr td:nth-child(7){
+	text-align: right;
+}
+body .files-view table tbody tr td:nth-child(7) a{
+	color: #333;
+}
+body .files-view table tbody .open-file, body .files-view table tbody .download-file, body .files-view table tbody .delete-file{
+	cursor: pointer;
+	height: 25px;
+	margin-left: 10px;
+}
+body .files-view table tbody .edit-name{
+	color: #424141;
+	cursor: pointer;
+}
+body .open-file-section .column-section .column-ul{
+	margin: 0px;
+	padding: 0px;
+}
+body .open-file-section .column-section .column-ul li{
+	display: inline-block;
+	padding: 4px;
+	background: blue;
+	color: #fff;
+	margin-right: 4px;
+	height: 30px;
+	width: 30px;
+	text-align: center;
+	cursor: pointer;
+}
+body .open-file-section .text{
+	padding-top: 10px;
+	font-family: 'font_1';
+	color: #4F4F4F;
+}
+body .open-file-section #excel-div{
+	margin-top: 20px;
+}
+body .files-view .error-msg{
+	font-family: 'font_1';
+	font-size: 30px;
+	text-align: center;
+	color: #dd4b39;
+}
+.pagination_bar ul{
+	margin: 0;
+	padding: 0;
+}
+.pagination_bar ul li{
+	padding: 7px;
+	background: #D4D4D4;
+	margin-right: 9px;
+	cursor: pointer;
+	display: inline-block;
+	color: #0F0F0F;
+	font-family: 'font_1';
+}
+
+.pagination_bar ul li:hover{
+	background:#3c8dbc;
+	color: #fff;
+}
+.pagination_bar ul li.li-bgclr{
+	background:#367fa9;
+	color:#fff;
+}
+.user-table{
+	font-family: 'font_1';
+	margin-top: 20px;
+}
+.user-table thead tr th{
+	text-align: center;
+
+}
+.user-table thead tr th:nth-child(1){
+	width: 5%;
+}
+.user-table thead tr th:nth-child(2){
+	width: 17%;
+}
+.user-table thead tr th:nth-child(3){
+	width: 10%;
+}
+.user-table thead tr th:nth-child(4){
+	width: 10%;
+}
+.user-table thead tr th:nth-child(5){
+	width: 7%;
+}
+.user-table thead tr th:nth-child(6){
+	width: 11%;
+}
+.user-table thead tr th:nth-child(7){
+	width: 5%;
+}
+.user-table tbody tr td{
+	padding: 10px;
+	text-align: center;
+}
+.user-table tbody tr td:nth-child(1){
+	width: 5%;
+	text-align: center;
+	font-weight: bold;
+}
+
+.user-table i{
+	font-size: 19px;
+	margin-right: 12px;
+	cursor: pointer;
+}
+.password-show{
+	display: none;
+}
+.fa-eye{
+	cursor: pointer;
+}
+
+/*login screeen*/
+.login-screen{
+	background: #222222 !important;
+}
+.login-screen .login{
+	margin-top: 140px;
+}
+.login-screen .login-heading{
+	background: #3c8dbc;
+	font-family: 'font_1';
+	color: #fff;
+	text-align: center;
+	font-size: 30px;
+	border-bottom: 4px solid #39647D;
+	padding: 18px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+.login-screen .login-div{
+	background: #f4f4f4;
+	padding: 50px 35px 0px;
+}
+.login-screen .login-div .login-error{
+	height: 50px;
+	text-align: center;
+	padding-top: 16px;
+	font-family: 'font_1';
+	color: #dd4b39;
+}
+.login-screen .login-div input{
+	font-size: 16px;
+	height: 50px;
+	font-family: 'font_1';
+}
+.login-screen .login-div input:nth-child(2){
+	margin-top: 20px;
+}
+.login-screen .login-btn-div{
+	background: #fff;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	padding: 20px;
+}
+.login-screen .login-btn-div input{
+	background: #3c8dbc;
+	font-family: 'font_1';
+	color: #fff;
+	text-align: center;
+	padding: 10px;
+	border:none;
+	width: 100%;
+	border-radius: 5px;
+}
+
+#user-delete-modal .modal-body i{
+	font-size: 21px;
+	color: #dd4b39;
+	margin-right: 16px;
+}
+#user-delete-modal .modal-body span{
+	font-size: 20px;
+	color: #dd4b39;
+	font-family: 'font_1';
+}
+#user-delete-modal #myModalLabel{
+	font-family: 'font_1';
+}
