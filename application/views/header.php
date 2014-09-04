@@ -64,21 +64,26 @@ else
 	<!-- add basic jquery -->
 	<script type="text/javascript" src="<?php echo base_url(); ?>js/jquery.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>js/jquery-ui.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>js/jquery.form.min.js"></script>
 	<!-- // end add basic jquery -->
 	
 	<script type="text/javascript" src="<?php echo base_url(); ?>js/bootstrap.js"></script>
 
 	<!-- javascript and css for handsontable... -->
-	<script data-jsfiddle="common" src="<?php echo base_url(); ?>js/jquery.handsontable.full.js"></script>
-	<link data-jsfiddle="common" rel="stylesheet" media="screen" href="<?php echo base_url(); ?>css/jquery.handsontable.full.css">
 	<!-- // end javascript and css for handsontable... -->
 	
+	<script src="http://handsontable.com/dist/jquery.handsontable.full.js"></script>
+	<link rel="stylesheet" media="screen" href="http://handsontable.com/dist/jquery.handsontable.full.css">
+	<!-- <link rel="stylesheet" media="screen" href="http://handsontable.com/demo/css/samples.css"> -->
 
 	<!-- use favicon -->
 	<link rel="shortcut icon" type="image/png" href="<?php echo base_url(); ?>img/favicon.ico"/>
 	<!-- // end use favicon -->
 </head>
 <body>
+<div class="pace pace-active pace-inactive">
+	<div class="pace-activity"></div>
+</div>
 
 <div class="container-fluid">
 	<header class='header'>
@@ -91,7 +96,27 @@ else
 		<div class="col-lg-10 top-nav">
 			<div class="row">
 				<div class="col-lg-1">
-					<img src="<?php echo base_url(); ?>img/toggle.png" alt="" class="toggle-img slide-left">
+					<?php 
+					$page =  explode("/",$page_name);
+					if($page[0] == "view")
+					{
+						if(isset($page[1]))
+						{
+							if($page[1] != "openfile")
+							{
+								echo '<img src="'.base_url().'img/toggle.png" alt="" class="toggle-img slide-left">';
+							}
+						}
+						else
+						{
+							echo '<img src="'.base_url().'img/toggle.png" alt="" class="toggle-img slide-left">';
+						}
+					}
+					else
+					{
+						echo '<img src="'.base_url().'img/toggle.png" alt="" class="toggle-img slide-left">';
+					}
+					 ?>
 				</div>
 				<div class="col-lg-3 col-lg-offset-8">
 					<div class="user">

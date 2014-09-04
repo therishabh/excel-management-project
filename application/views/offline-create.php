@@ -47,7 +47,8 @@
 									<div class="text-label">Upload Excel File : </div>
 								</div>
 								<div class="col-lg-6">
-									<div class="upload upload-excel-file">Upload Excel (.xls) File</div>
+									<div class="upload upload-excel-file">Upload File</div>
+									<div style="font-size:12px; text-align:center; padding-top:5px; font-family:'font_1'">Format support : .xls .xlsx .pdf .doc .docx</div>
 									<input type="file" class="hidden" name="file" id="file-upload" accept=".xls,.xlsx,.pdf,.doc,.docx">
 								</div>
 								<div class="col-lg-3">

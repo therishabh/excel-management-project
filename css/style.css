@@ -149,18 +149,18 @@ body #main-body .main-heading{
 body #main-body #main-content-body{
 	background-color:#f9f9f9;
 	padding: 20px 15px;
-	width: 100%;
+	width: 90%;
 	overflow-y: auto;
 	overflow-x: auto;
 	margin-top: 1px;
 }
-/*body #main-body .main-content{
+body #main-body .main-content{
 	padding: 20px 15px;
 	width: 100%;
 	overflow-y: auto;
 	overflow-x: auto;
 }
-*/
+
 body #main-body .offline-create .msg,body #main-body .online-create .msg{
 	text-align: center;
 	font-family: 'font_1';
@@ -322,13 +322,13 @@ body .files-view table thead th:nth-child(4){
 	width: 4%;
 }
 body .files-view table thead th:nth-child(5){
-	width: 14%;
+	width: 16%;
 }
 body .files-view table thead th:nth-child(6){
-	width: 13%;
+	width: 15%;
 }
 body .files-view table thead th:nth-child(7){
-	width: 14%;
+	width: 18%;
 }
 body .files-view table tbody img{
 	height: 30px;
@@ -358,7 +358,10 @@ body .files-view table tbody tr td:nth-child(7){
 body .files-view table tbody tr td:nth-child(7) a{
 	color: #333;
 }
-body .files-view table tbody .open-file, body .files-view table tbody .download-file, body .files-view table tbody .delete-file{
+body .files-view table tbody .open-file, 
+body .files-view table tbody .download-file, 
+body .files-view table tbody .delete-file,
+body .files-view table tbody .upload-file{
 	cursor: pointer;
 	height: 25px;
 	margin-left: 10px;
@@ -370,17 +373,34 @@ body .files-view table tbody .edit-name{
 body .open-file-section .column-section .column-ul{
 	margin: 0px;
 	padding: 0px;
+	margin-top: 10px;
 }
 body .open-file-section .column-section .column-ul li{
 	display: inline-block;
 	padding: 4px;
-	background: blue;
+	background: #367fa9;
 	color: #fff;
 	margin-right: 4px;
 	height: 30px;
 	width: 30px;
 	text-align: center;
 	cursor: pointer;
+	border-radius: 5px;
+}
+body .open-file-section .operator-section{
+	margin-top: 10px;
+}
+body .open-file-section .operator-section button{
+	padding: 5px;
+	background: #367fa9;
+	color: #fff;
+	border:none;
+	padding-left: 10px;
+	height: 33px;
+	width: 33px;
+	padding-right: 10px;
+	border-radius: 150px;
+	outline: none;
 }
 body .open-file-section .text{
 	padding-top: 10px;
@@ -388,8 +408,21 @@ body .open-file-section .text{
 	color: #4F4F4F;
 }
 body .open-file-section #excel-div{
-	margin-top: 20px;
+	/*margin-top: 20px;*/
 }
+body .open-file-section .inactive{
+	background: #B4B4B4 !important;
+}
+body .open-file-section .selected-div{
+	font-family: 'font_1';
+	font-size: 20px;
+	margin-top: 10px;
+	font-weight: bold;
+}
+body .open-file-section .done-btn{
+	margin-left: 15px;
+}
+
 body .files-view .error-msg{
 	font-family: 'font_1';
 	font-size: 30px;
@@ -536,3 +569,114 @@ body .files-view .error-msg{
 #user-delete-modal #myModalLabel{
 	font-family: 'font_1';
 }
+.display-files .table .fa-check-circle{
+	font-size: 27px;
+	margin-top: 2px;
+}
+.display-error{
+	font-size: 19px;
+	color: #dd4b39;
+	text-align: center;
+	font-family: 'font_1';
+	padding-top: 2px;
+}
+.display-success{
+	font-size: 19px;
+	color: #168039;
+	text-align: center;
+	font-family: 'font_1';
+	padding-top: 2px;
+
+}
+
+#file-delete-modal .modal-body i{
+	font-size: 20px;
+	color: #dd4b39;
+	margin-right: 16px;
+}
+#file-delete-modal .modal-body span{
+	font-size: 18px;
+	color: #dd4b39;
+	font-family: 'font_1';
+}
+#file-delete-modal #myModalLabel{
+	font-family: 'font_1';
+}
+#file-upload-modal .modal-body i{
+	font-size: 20px;
+	color: #dd4b39;
+	margin-right: 16px;
+}
+#file-upload-modal .modal-body span{
+	font-size: 18px;
+	color: #dd4b39;
+	font-family: 'font_1';
+}
+#file-upload-modal #myModalLabel{
+	font-family: 'font_1';
+}
+.overright-file-form{
+	display: inline;
+}
+#progress{
+	margin-top: 2px;
+	width: 87%;
+	float: left;
+	margin-right: 11px;
+}
+#percent-progress{
+	font-family: 'font_1';
+	font-size: 18px;
+	margin-left: 10px;
+}
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-activity {
+	display: block;
+	position: fixed;
+	z-index: 2000;
+	top: 7px;
+	right: 48%;
+	width: 35px;
+	height: 35px;
+	border: solid 3px transparent;
+	border-top-color: #fff;
+	border-left-color: #fff;
+	border-radius: 150px;
+	-webkit-animation: pace-spinner 400ms linear infinite;
+	-moz-animation: pace-spinner 400ms linear infinite;
+	-ms-animation: pace-spinner 400ms linear infinite;
+	-o-animation: pace-spinner 400ms linear infinite;
+	animation: pace-spinner 400ms linear infinite;
+}
+
+@-webkit-keyframes pace-spinner {
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-moz-keyframes pace-spinner {
+  0% { -moz-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -moz-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-o-keyframes pace-spinner {
+  0% { -o-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-ms-keyframes pace-spinner {
+  0% { -ms-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -ms-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@keyframes pace-spinner {
+  0% { transform: rotate(0deg); transform: rotate(0deg); }
+  100% { transform: rotate(360deg); transform: rotate(360deg); }
+}*/

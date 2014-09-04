@@ -261,7 +261,6 @@ jQuery(document).ready(function($) {
 		{
 			var flag_password = 1;
 		}
-		console.log(flag_user_name+"********"+flag_username+"**********"+flag_password);
 		if(flag_user_name == "1" && flag_username == "1" && flag_password == "1")
 		{
 			$.ajax({
@@ -278,7 +277,7 @@ jQuery(document).ready(function($) {
 					+'<span class="password-show">'+password+'</span>'
 					+'<i class="fa fa-eye pull-right"></i>'
 					+'</td><td>'+role+'</td><td>'+permission+'</td><td>'
-					+'<i class="fa fa-pencil edit-btn"></i><i class="fa fa-times delete-btn"></i>'
+					+'<i class="fa fa-pencil edit-btn"></i><i class="fa fa-times delete-btn "></i>'
 					+'</td></tr>'
 			$(".user-table tbody tr:first-child").after(tr);
 
@@ -361,6 +360,10 @@ jQuery(document).ready(function($) {
 	});
 
 	$("#user-delete-modal .close").click(function() {
+		$(".no-btn").click();
+	});
+
+	$("#user-delete-modal").click(function() {
 		$(".no-btn").click();
 	});
 
